@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed');
+
+header {
+    padding-top: 5px;
+    border-radius: 40px;
+}
+
+.head {
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    border: 3px solid grey;
+    background: rgb(46, 46, 48, 0.8);
+}
+
+main {
+    background: rgb(46, 46, 48, 0.5);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-radius: 40px;
+    color: #eae2ff;
+}
+
+.img1 {
+    margin-top: 20px;
+   text-align: center;
+   border:3px solid #bfc0c1;
+   margin-left: 70px;
+}
+
+.img2 {
+    border-bottom-style: solid;
+    padding-bottom: 20px;
+}
+
+.img3 {
+    border-bottom-style: solid;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    font-family: 'Varela Round', sans-serif;
+    color: #bfc0c1;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    color: #eae2ff;
+    font-family: 'Varela Round', sans-serif;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+}
+
+h4 {
+    text-align: center;
+}
+
+h5 {
+   font-size: 30px; 
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background: rgb(46, 46, 48, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 20px;
+    border: 3px solid grey;
+    border-radius: 40px;
+    margin-top: 15px;
+
+
+}
+
+li {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    margin-right: 40px;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    flex-wrap: wrap;
+
+}
+
+li a:hover {
+    background-color: #111;
+    text-decoration: none;
+    color: white;
+    border-radius: 40px;
+}
+
+body {
+    background-image: url(http://i74.beon.ru/40/76/577640/98/45445198/1.jpeg);
+    font-family: 'Fira Sans Condensed', sans-serif;
+    max-width: 980px;
+    margin: auto;
+}
+
+.articles {
+    padding: 0px 15px 15px 15px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+.carousel-wrapper {
+    height: 300px;
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    border :3px solid #37383a;
+    margin-left: 225px;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+    border: solid #37383a;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev {
+    left: -30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+    right: -30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.light {
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .arrow,
+    .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+    }
+}
+
+/*Select every element*/
+
+[id^="item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('http://multfilmy-dlya-ditey.org.ua/wp-content/uploads/2013/06/igor3.jpg');
+    background-size: cover;
+}
+
+.item-2 {
+    background: url('https://www.izhevskinfo.ru/pictures/afisha/mer/2090.jpg');
+    background-size: cover;
+}
+
+.item-3 {
+    background: url('http://multfilmy-dlya-ditey.org.ua/wp-content/uploads/2013/06/igor2.jpg');
+    background-size: cover;
+}
+
+*:target~.item-1 {
+    opacity: 0;
+}
+
+#item-1:target~.item-1 {
+    opacity: 1;
+}
+
+#item-2:target~.item-2,
+#item-3:target~.item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+
+.carousel {
+    padding-bottom: 40px;
+    padding-right: 50px;
+    margin-top: 5px;
+    padding-left: 25px;
+}
+
+.info {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 40px;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    margin-right: 10px;
+    
+}
+
+
+footer {
+    background: rgb(46, 46, 48, 0.5);
+    margin-top: 25px;
+    color: #eae2ff;
+    text-align: center;
+    border-top-style: solid;
+    border-radius: 40px;
+
+}
